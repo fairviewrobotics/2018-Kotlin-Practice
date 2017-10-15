@@ -1,0 +1,10 @@
+# Gradle files
+.gradle/
+
+# Intelij files
+.idea/
+2018-Kotlin-Practice.iml
+
+# Build files
+build/
+out/
