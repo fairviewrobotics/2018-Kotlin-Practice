@@ -1,5 +1,5 @@
 buildscript {
-    ext.kotlin_version = '1.1.50'
+    ext.kotlin_version = '1.1.51'
     repositories {
         mavenCentral()
     }
@@ -19,9 +19,9 @@ apply plugin: 'kotlin'
 
 frc {
     team = "2036"
-    robotClass = "org.team401.robot.Robot"
+    robotClass = "Robot"
 
-    // TODO:kp - update robot settings
+    // TODO - update robot settings
     deployTimeout = 5
     rioIP = "10.4.1.2"
 }
@@ -60,8 +60,4 @@ jar {
 
 task wrapper(type: Wrapper) {
     gradleVersion = '3.3'
-}
-
-sourceSets {
-    main.java.srcDirs += 'src/main/kotlin'
 }

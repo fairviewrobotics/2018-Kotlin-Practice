@@ -3,7 +3,7 @@
 
 # Intelij files
 .idea/
-2018-Kotlin-Practice.iml
+*.iml
 
 # Build files
 build/
