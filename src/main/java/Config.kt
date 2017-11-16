@@ -7,7 +7,10 @@ import org.jire.kton.kton
  *  2. To attach something to a key, instead of using the ":" from JSON, a "to" is used
  *  3. Lists and Hierarchies both use {} and immediately follow the identifier and don't need the "to" from 2
  *
- * TODO put documentation for how to access values stored in config
+ * Access:
+ *  1. To access an object (something that has {}) we must use () and a string of the name
+ *  2. To access a value (something that has a set value) we must use [] and a string of the name
+ * @see FollowJoystick
  */
 val config = kton {
     "ports" {
