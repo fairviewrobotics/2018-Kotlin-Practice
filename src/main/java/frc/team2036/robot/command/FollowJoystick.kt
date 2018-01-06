@@ -1,8 +1,8 @@
 package frc.team2036.robot.command
 
-import frc.team2036.robot.config
 import edu.wpi.first.wpilibj.Joystick
 import edu.wpi.first.wpilibj.command.Command
+import frc.team2036.robot.config
 import frc.team2036.robot.subsystem.drivetrain
 
 //Constructs an immutable global FollowJoystick
@@ -12,7 +12,7 @@ val followJoystick = FollowJoystick()
  * A Command that connects the joystick to the drivetrain
  * Just sends all joystick inputs to the robot
  */
-class FollowJoystick: Command() {
+class FollowJoystick : Command() {
 
     //Stores the WPILib joystick for internal use
     private val joystick = Joystick(config("ports")["joystick"] as Int)
@@ -22,7 +22,7 @@ class FollowJoystick: Command() {
      * Just states that this command needs the drivetrain
      */
     init {
-        requires(drivetrain)
+        this.requires(drivetrain)
     }
 
     /**
@@ -30,7 +30,6 @@ class FollowJoystick: Command() {
      * Just takes in the joystick axes and passes them to the drivetrain to handle driving
      */
     override fun execute() {
-        println(String.format("x: %s, y: %s", joystick.x, joystick.y))
         drivetrain.drive(joystick.x, joystick.y)
     }
 
@@ -42,7 +41,7 @@ class FollowJoystick: Command() {
     }
 
     /**
-     * TODO figure out how this works
+     * FollowJoystick is never finished
      */
     override fun isFinished(): Boolean {
         return false

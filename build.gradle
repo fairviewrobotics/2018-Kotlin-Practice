@@ -34,7 +34,6 @@ compileTestKotlin {
 def TEAM = 2036
 def ROBOT_CLASS = "frc.team2036.robot.Robot"
 
-
 // Define my targets (RoboRIO) and artifacts (deployable files)
 // This is added by GradleRIO's backing project EmbeddedTools.
 deploy {

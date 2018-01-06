@@ -1,4 +1,5 @@
 package frc.team2036.robot
+
 import edu.wpi.first.wpilibj.IterativeRobot
 import edu.wpi.first.wpilibj.command.Scheduler
 import frc.team2036.robot.subsystem.drivetrain
@@ -8,7 +9,7 @@ import frc.team2036.robot.subsystem.drivetrain
  * Defines the main robot class that will be run by the RIO
  * Is an iterative robot so that it can define a set of functions that periodically gets executed
  */
-class Robot: IterativeRobot() {
+class Robot : IterativeRobot() {
 
     /**
      * The entry point for a robot

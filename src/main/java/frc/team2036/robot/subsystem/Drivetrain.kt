@@ -1,10 +1,10 @@
 package frc.team2036.robot.subsystem
 
-import frc.team2036.robot.config
-import frc.team2036.robot.command.followJoystick
-import edu.wpi.first.wpilibj.command.Subsystem
 import edu.wpi.first.wpilibj.RobotDrive
 import edu.wpi.first.wpilibj.Talon
+import edu.wpi.first.wpilibj.command.Subsystem
+import frc.team2036.robot.command.followJoystick
+import frc.team2036.robot.config
 
 
 //Constructs an immutable global drivetrain
@@ -15,10 +15,10 @@ val drivetrain = Drivetrain()
  * Represents a RobotDrive that handles driving
  * This particular implementation uses arcadeDrive as opposed to mecanumDrive_Cartesian, mecanumDrive_Polar, or tankDrive
  */
-class Drivetrain: Subsystem() {
+class Drivetrain : Subsystem() {
 
     //The robot drive is the actual part of the code that controls robot movement; is constructed with Talons
-    val robotDrive = RobotDrive(
+    private val robotDrive = RobotDrive(
             Talon(config("ports")("wheels")["frontLeft"] as Int),
             Talon(config("ports")("wheels")["backLeft"] as Int),
             Talon(config("ports")("wheels")["frontRight"] as Int),
