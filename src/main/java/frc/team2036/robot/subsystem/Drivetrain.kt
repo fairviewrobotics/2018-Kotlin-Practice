@@ -28,7 +28,6 @@ class Drivetrain: Subsystem() {
      * Sets the default command as a followJoystick command
      */
     override fun initDefaultCommand() {
-        println("Yay!")
         this.defaultCommand = followJoystick
     }
 
@@ -36,8 +35,9 @@ class Drivetrain: Subsystem() {
      * Takes in an x movement and a y movement and actually moves the drivetrain by that amount
      */
     fun drive(x: Double, y: Double) {
-        //Is (y, x) because y is how much forward or backward it goes, and x is how much to the side it goes
-        this.robotDrive.arcadeDrive(y, x)
+        val scaledX = x * config["motorScale"] as Double
+        val scaledY = y * config["motorScale"] as Double
+        this.robotDrive.arcadeDrive(scaledX, scaledY)
     }
 
 }

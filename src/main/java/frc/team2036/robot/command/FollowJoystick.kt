@@ -30,6 +30,7 @@ class FollowJoystick: Command() {
      * Just takes in the joystick axes and passes them to the drivetrain to handle driving
      */
     override fun execute() {
+        println(String.format("x: %s, y: %s", joystick.x, joystick.y))
         drivetrain.drive(joystick.x, joystick.y)
     }
 
@@ -46,5 +47,4 @@ class FollowJoystick: Command() {
     override fun isFinished(): Boolean {
         return false
     }
-
 }

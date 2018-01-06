@@ -18,10 +18,11 @@ val config = kton {
     "ports" {
         "joystick" to 5
         "wheels" {
-            "frontLeft"  to 1
-            "frontRight" to 2
-            "backLeft"   to 3
-            "backRight"  to 4
+            "frontLeft"  to 2
+            "frontRight" to 3
+            "backLeft"   to 1
+            "backRight"  to 0
         }
     }
+    "motorScale" to .5
 }
