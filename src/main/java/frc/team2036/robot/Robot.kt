@@ -1,5 +1,7 @@
+package frc.team2036.robot
 import edu.wpi.first.wpilibj.IterativeRobot
-import edu.wpi.first.wpilibj.command.Scheduler
+import frc.team2036.robot.subsystem.drivetrain
+import frc.team2036.robot.command.followJoystick
 
 /**
  * Entry point for custom code
@@ -14,14 +16,13 @@ class Robot: IterativeRobot() {
      */
     override fun robotInit() {
         super.robotInit()
+        println("YAY!!!!!!")
+        println(drivetrain)
     }
 
-    /**
-     * A function that periodically gets called in the teleop period
-     * Whatever goes in here defines what the robot periodically does
-     */
     override fun teleopPeriodic() {
-        Scheduler.getInstance().run()
+        println("TELEOP!")
+        drivetrain.drive(1.0,0.0)
     }
 
 }

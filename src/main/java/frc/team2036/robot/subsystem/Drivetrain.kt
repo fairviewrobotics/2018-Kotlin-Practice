@@ -1,7 +1,7 @@
-package subsystem
+package frc.team2036.robot.subsystem
 
-import config
-import command.followJoystick
+import frc.team2036.robot.config
+import frc.team2036.robot.command.followJoystick
 import edu.wpi.first.wpilibj.command.Subsystem
 import edu.wpi.first.wpilibj.RobotDrive
 import edu.wpi.first.wpilibj.Talon
@@ -28,6 +28,7 @@ class Drivetrain: Subsystem() {
      * Sets the default command as a followJoystick command
      */
     override fun initDefaultCommand() {
+        println("Yay!")
         this.defaultCommand = followJoystick
     }
 

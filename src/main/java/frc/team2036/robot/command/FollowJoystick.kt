@@ -1,9 +1,9 @@
-package command
+package frc.team2036.robot.command
 
-import config
+import frc.team2036.robot.config
 import edu.wpi.first.wpilibj.Joystick
 import edu.wpi.first.wpilibj.command.Command
-import subsystem.drivetrain
+import frc.team2036.robot.subsystem.drivetrain
 
 //Constructs an immutable global FollowJoystick
 val followJoystick = FollowJoystick()
@@ -44,7 +44,7 @@ class FollowJoystick: Command() {
      * TODO figure out how this works
      */
     override fun isFinished(): Boolean {
-        TODO("not implemented")
+        return false
     }
 
 }

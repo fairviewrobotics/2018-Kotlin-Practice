@@ -1,3 +1,5 @@
+package frc.team2036.robot
+
 import org.jire.kton.kton
 
 /**
@@ -14,7 +16,7 @@ import org.jire.kton.kton
  */
 val config = kton {
     "ports" {
-        "joystick" to 0
+        "joystick" to 5
         "wheels" {
             "frontLeft"  to 1
             "frontRight" to 2
